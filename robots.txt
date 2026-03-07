@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://dgcompany.site/sitemap.xml
+
+Sitemap: https://www.dgcompany.site/sitemap.xml
