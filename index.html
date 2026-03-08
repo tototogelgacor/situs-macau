@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <script async custom-element="amp-date-display" src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   
@@ -668,8 +667,6 @@ font-size:20px;
     font-size: 18px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-
 .floating-wrapper {
     position: fixed;
     top: -4px; /* Jarak dari atas layar */
@@ -703,11 +700,6 @@ font-size:20px;
     justify-content: center;
     transition: all 0.3s ease;
 }
-
-/* Import Font agar lebih cantik */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
 /* Container Utama Menempel Atas dengan Radius Bawah */
 .top-nav-rounded {
@@ -779,7 +771,7 @@ font-size:20px;
 /* Menyesuaikan jarak Body agar tidak tertutup */
 body {
     margin: 0;
-    padding-top: 75px !important;
+    padding-top: 75px;
 }
 
 /* Responsif untuk HP Kecil (Tetap dipertahankan) */
@@ -792,6 +784,7 @@ body {
 }
 </style>
 
+<body>
 <div class="top-nav-rounded">
     <div class="nav-content-inner">
         <a href="promosi.html" class="nav-btn-item">
@@ -829,7 +822,7 @@ body {
     </div>
 </div>
 
-<body>  <div class="main-wrapper">
+  <div class="main-wrapper">
     <div class="main-banner">
         <img src="https://i.postimg.cc/XqfYVzg7/DATA-MACAU-(1).png" alt="Macau Banner">
 
