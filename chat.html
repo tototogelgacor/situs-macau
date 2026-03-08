@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Super AI - Paito Macau</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;600&display=swap');
+        body { font-family: 'Poppins', sans-serif; background: #f0f0f0; margin: 0; }
+        
+        /* CSS UNTUK TOMBOL KEMBALI */
+        .btn-back-home {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: 0.3s;
+        }
+        .btn-back-home:hover { background: #ffd700; color: #000; }
+
+        .chat-header { background: linear-gradient(to bottom, #006400, #003300); color: #fff; padding: 15px; text-align: center; border-bottom: 3px solid #ffd700; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; align-items: center; }
+        .chat-header h2 { margin: 0; font-family: 'Oswald', sans-serif; font-size: 20px; }
+        #chat-box { height: calc(100vh - 140px); overflow-y: auto; padding: 15px; display: flex; flex-direction: column; gap: 12px; }
+        .bubble { padding: 12px 16px; border-radius: 20px; font-size: 14px; max-width: 85%; line-height: 1.6; }
+        .bot { background: #fff; color: #333; align-self: flex-start; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); border-bottom-left-radius: 2px; }
+        .user { background: #006400; color: #fff; align-self: flex-end; box-shadow: -2px 2px 5px rgba(0,0,0,0.1); border-bottom-right-radius: 2px; }
+        .typing { font-style: italic; font-size: 12px; color: #888; margin: 5px 20px; display: none; }
+        .input-area { position: fixed; bottom: 0; width: 97%; background: #fff; padding: 10px; display: flex; gap: 8px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); align-items: center; }
+        input { flex: 1; padding: 12px 18px; border: 1px solid #ddd; border-radius: 30px; outline: none; font-size: 14px; }
+        .send-btn { background: #006400; color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; transition: 0.2s; -webkit-tap-highlight-color: transparent; }
+        .send-btn:active { background: rgba(255, 255, 255, 0.8); transform: scale(0.9); }
+    </style>
+</head>
+<body>
+
+<div class="chat-header">
+    <a href="https://www.dgcompany.site/" class="btn-back-home">❮ KEMBALI</a>
+    <h2>ADMIN TOGEL MACAU</h2>
+</div>
+
+<div id="chat-box">
+    <div class="bubble bot">Halo Bos! Admin siap melayani. Silakan tanya apa saja soal Paito, Live Draw, atau Prediksi Macau. Admin standby 24 jam!</div>
+</div>
+<div id="typing" class="typing">Admin sedang mengetik...</div>
+
+<div class="input-area">
+    <input type="text" id="user-input" placeholder="Tanya apa saja, Bos...">
+    <button class="send-btn" onclick="send()">➤</button>
+</div>
+
+<script>
+    function send() {
+        const input = document.getElementById("user-input");
+        const box = document.getElementById("chat-box");
+        const type = document.getElementById("typing");
+        const val = input.value.trim().toLowerCase();
+        if (!val) return;
+
+        // Tampilkan pesan user
+        box.innerHTML += `<div class="bubble user">${input.value}</div>`;
+        input.value = "";
+        box.scrollTop = box.scrollHeight;
+        
+        // Efek Mengetik
+        type.style.display = "block";
+
+        setTimeout(() => {
+            type.style.display = "none";
+            let r = "Waduh Bos, Admin kurang mengerti maksudnya. Tapi kalau Bos tanya soal **Paito, Live Draw, Prediksi, atau Cara Daftar**, Admin pasti faham! Coba tanya itu ya Bos.";
+
+            // DATABASE LOGIKA JAWABAN (SAMA SEPERTI ASLI)
+            if (/paito|tabel|warna|tarikan|pola|grafik|kolom|baris|rumus/i.test(val)) {
+                r = "Situs kita menyediakan **Paito Macau** paling lengkap Bos! Tersedia paito warna harian dan mingguan. Fitur warna ini sengaja dibuat agar Bos lebih mudah menarik pola angka jitu setiap putaran. Langsung cek di halaman depan ya!";
+            }
+            else if (/live|draw|result|keluar|keluaran|hasil|jam|tadi|update|cepet|cepat/i.test(val)) {
+                r = "Untuk **Live Draw Macau**, kita yang paling update Bos! Hasil langsung ditarik dari pusat secara real-time. Bos nggak perlu nunggu lama, begitu bola keluar, sistem kita langsung menampilkannya di tabel result.";
+            }
+            else if (/daftar|akun|register|gabung|id|buat|regis|join/i.test(val)) {
+                r = "Mau **Daftar** akun baru Bos? Caranya sangat mudah. Klik tombol emas 'DAFTAR' di menu paling atas. Masukkan data Bos dengan benar, proses cuma 1 menit ID langsung aktif dan bisa digunakan.";
+            }
+            else if (/prediksi|bocoran|jitu|angka|main|bbfs|akurat|hoki|jp|paus/i.test(val)) {
+                r = "Cari **Prediksi Macau** jitu? Admin punya tim master paito yang setiap hari membagikan angka main, colok bebas, hingga BBFS. Cek saja di menu Prediksi, jadikan bahan perbandingan dengan angka hoki Bos hari ini!";
+            }
+            else if (/data|rekap|riwayat|sejarah|arsip|lama|dulu/i.test(val)) {
+                r = "**Data Macau** di situs ini sangat lengkap Bos, merangkum riwayat keluaran dari tahun ke tahun. Sangat cocok buat Bos yang hobi ngerumus angka berdasarkan statistik keluaran lama.";
+            }
+            else if (/depo|wd|deposit|withdraw|dana|saldo|bayar|duit|uang|bank|gopay|ovo/i.test(val)) {
+                r = "Kita terima segala jenis pembayaran Bos! Mau lewat Bank (BCA, BNI, BRI, Mandiri) atau E-Wallet (Dana, Ovo, Gopay, QRIS) semua prosesnya kilat. Silakan cek di menu deposit untuk nomor tujuan terbarunya.";
+            }
+            else if (/halo|admin|tes|p|oi|hi|pagi|siang|sore|malam|assalam/i.test(val)) {
+                r = "Halo juga Bos! Admin standby 24 jam penuh di sini. Ada yang bisa Admin bantu mengenai info pasaran Macau hari ini?";
+            }
+            else if (/makasih|terima kasih|ok|siap|mantap|tengkyu|nuhun/i.test(val)) {
+                r = "Sama-sama Bos! Senang bisa melayani Bos. Jangan lupa simpan link situs kita dan ajak teman-teman untuk pantau result di sini ya. Semoga JP terus!";
+            }
+            else if (/apa|siapa|kenapa|mana|dimana/i.test(val)) {
+                r = "Admin fokus memberikan informasi **Paito, Live Draw, dan Prediksi Macau** tercepat Bos. Kalau ada kendala soal fitur tersebut, tanyakan saja ya!";
+            }
+            else if (/link|alamat|pindah|web|situs|blokir|nawala|internet positif|positi|ganti/i.test(val)) {
+                r = "Tenang Bos! Kalau situs utama sulit diakses, Admin selalu sedia **Link Alternatif** yang aman dari internet positif. Simpan alamat ini baik-baik di browser Bos supaya gampang pantau Paito Macau setiap hari!";
+            }
+            else if (/jam|jadwal|tutup|buka|putaran|pukul|jam berapa/i.test(val)) {
+                r = "Pasaran Macau kita update terus Bos! Ada banyak putaran dalam sehari mulai dari siang sampai malam. Untuk jadwal rincinya, Bos bisa lihat langsung di tabel **Jadwal Macau** yang ada di halaman utama agar tidak ketinggalan pasang.";
+            }
+            else if (/macet|error|putih|blank|loading|muter|ngadat|refresh|lemot/i.test(val)) {
+                r = "Maaf atas ketidaknyamanannya Bos. Kalau halaman terasa berat atau macet, coba bersihkan *cache* browser atau ganti koneksi internetnya Bos. Live Draw kami tarikan langsung dari pusat, jadi pastikan sinyal Bos stabil ya!";
+            }
+            else if (/aman|percaya|bayar|bo|penipu|lunas|wd aman/i.test(val)) {
+                r = "Situs kita sudah **Terpercaya** dan resmi melayani ribuan member Bos. Berapapun kemenangan Bos, mau JP paus sekalipun, pasti dibayar lunas secepat kilat. Keamanan data Bos juga terjaga ketat di sini!";
+            }
+            else if (/kalah|zonk|rugi|panas|sial|apes|pusing|nyesel/i.test(val)) {
+                r = "Sabar ya Bos, namanya juga hoki-hokian. Coba istirahat dulu sejenak, nanti ngerumus lagi pakai **Paito Warna** kita. Banyak yang sudah buktikan JP setelah pelajari pola tarikan angka di sini. Semangat, Bos pasti JP!";
+            }
+            else if (/kopi|rokok|makan|laper|bagi duit|bagi jp|pinjam/i.test(val)) {
+                r = "Hehe bisa saja Bos ini. Mending kita fokus narik paito dulu, kalau sudah JP Paus mah boro-boro kopi, pabriknya sekalian bisa Bos beli! Gaspol Bosku!";
+            }
+            else if (/gimana|caranya|pakai|fitur|tombol|fungsi/i.test(val)) {
+                r = "Gampang Bos! Di atas ada menu Paito, Prediksi, dan Live Draw. Bos tinggal klik saja sesuai kebutuhan. Semuanya gratis dan update tiap hari buat bantu Bos ngerumus angka.";
+            }
+            else if (/hongkong|hk|singapura|sgp|sidney|sdy|pasaran lain/i.test(val)) {
+                r = "Untuk sementara kita fokus berikan info **Tercepat & Terakurat untuk Macau** dulu ya Bos. Tapi tenang, rumus paito kita seringkali juga bisa diaplikasikan ke pasaran lain kok!";
+            }
+            else if (/baru|gabung|pemula|belajar|kenal/i.test(val)) {
+                r = "Selamat datang Bosku! Salam kenal ya. Bos sudah ada di tempat yang tepat buat mantau Macau. Jangan sungkan tanya-tanya Admin kalau ada yang bingung!";
+            }
+            else if (/malam minggu|libur|minggu|cuti/i.test(val)) {
+                r = "Malam minggu atau libur tetap gaspol Bos! Macau tidak ada liburnya, Admin juga standby 24 jam buat nemenin Bos ngerumus.";
+            }
+            else if (/robot|bot|asli|manusia/i.test(val)) {
+                r = "Admin asli Bos, cuma memang Admin sudah dilatih pakai teknologi AI biar bisa balas chat Bos secepat kilat. Yang penting JP-nya nyata kan Bos? Hehe.";
+            }
+
+            box.innerHTML += `<div class="bubble bot">${r}</div>`;
+            box.scrollTop = box.scrollHeight;
+        }, 1500);
+    }
+    document.getElementById("user-input").addEventListener("keypress", (e) => { if (e.key === "Enter") send(); });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun Baru | Registrasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #27ae60;
+            --bg-color: #f0f2f5;
+            --text-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #219150;
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsif untuk Smartphone */
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Buat Akun</h1>
+        <p>Isi data di bawah untuk mendaftar</p>
+    </div>
+
+    <form id="registrationForm" action="#" method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Pilih username unik" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Aktif</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" required minlength="6">
+        </div>
+
+        <div class="form-group">
+            <label for="confirm_password">Ulangi Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Ketik ulang password" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Daftar Sekarang</button>
+    </form>
+
+    <div class="footer-links">
+        Sudah punya akun? <a href="login.html">Login di sini</a> <br><br>
+        <a href="https://www.dgcompany.site/">← Kembali ke Beranda</a>
+    </div>
+</div>
+
+<script>
+    // Validasi sederhana untuk mencocokkan password
+    const form = document.getElementById('registrationForm');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm_password');
+
+    form.addEventListener('submit', function(e) {
+        if (password.value !== confirmPassword.value) {
+            e.preventDefault();
+            alert("Password dan Konfirmasi Password tidak cocok!");
+        }
+    });
+</script>
+
+</body>
+</html>
