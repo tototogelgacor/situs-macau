@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+Disallow: /cgi-bin/
+Disallow: /search
+Disallow: /*?*
+Disallow: /wp-admin/
+
+Allow: /wp-admin/admin-ajax.php
+
 Sitemap: https://www.dgcompany.site/sitemap.xml
