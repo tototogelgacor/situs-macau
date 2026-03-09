@@ -72,23 +72,30 @@
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  "headline": "Prediksi & Hasil Harian Paito Macau",
-  "image": "https://i.postimg.cc/XqfYVzg7/DATA-MACAU-(1).png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.dgcompany.site/"
+  },
+  "headline": "Paito Macau Terbaru, Prediksi Macau Akurat, Live Draw Macau dan Data Macau Lengkap",
+  "image": [
+    "https://i.postimg.cc/XqfYVzg7/DATA-MACAU-(1).png"
+  ],
   "datePublished": "2026-03-08T08:00:00+07:00",
-  "dateModified": "2026-03-08T16:00:00+07:00",
+  "dateModified": "2026-03-09T14:00:00+07:00",
   "author": {
-    "@type": "Organization",
-    "name": "Paito Macau"
+    "@type": "Person",
+    "name": "Admin Macau",
+    "url": "https://www.dgcompany.site/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Paito Macau",
+    "name": "Togel Macau",
     "logo": {
       "@type": "ImageObject",
       "url": "https://i.postimg.cc/8CQ9SMGD/images.png"
     }
   },
-  "description": "Pantau Paito Macau, Prediksi Macau, Live Draw Macau, dan Data Macau terbaru setiap hari. Hasil akurat dan prediksi lengkap untuk strategi pasaran Macau Anda."
+  "description": "Update harian Paito Macau, Prediksi Macau, Live Draw Macau, dan Data Macau. Analisis akurat dan informasi lengkap untuk strategi bermain di pasaran Macau."
 }
 </script>
 
@@ -97,7 +104,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Paito Macau",
+  "name": "Togel Macau",
   "url": "https://www.dgcompany.site/",
   "potentialAction": {
     "@type": "SearchAction",
@@ -152,7 +159,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Paito Macau",
+  "name": "Togel Macau",
   "url": "https://www.dgcompany.site/",
   "logo": "https://i.postimg.cc/8CQ9SMGD/images.png",
   "sameAs": [
@@ -238,35 +245,70 @@
 
 <!-- CSS -->
 <style amp-custom>
+/* ============================================================
+   1. RESET & DASAR (Pondasi Utama Website)
+   ============================================================ */
 * {
-    margin: 0px;
-    padding: 3px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-background:#e6e6e6;
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
+:root {
+    --primary: #747474;
+    --accent: #e74c3c;
+    --light: #003517;
+    --gold: #f1c40f;
+    --hijau-tua: #054d32;
+    --hijau-terang: #1aed9c;
 }
 
-.main-wrapper{
-max-width:860px;
-margin:20px auto;
-background:#ffffff;
-border:3px solid #0a7d2b;
-border-radius:8px;
-padding:0px;
-box-sizing:border-box;
+body {
+    background: #e6e6e6;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 0;      /* Menghapus jarak kosong di atas */
+    padding-bottom: 80px; /* Ruang agar konten tidak tertutup menu bawah */
 }
 
+.main-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 5px solid #0a7d2b;
+    border-radius: 8px;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* CSS LOGO & NAVBAR */
+/* ============================================================
+   2. HEADER & ANIMASI WARNA (Bagian Atas)
+   ============================================================ */
+header { 
+    background: linear-gradient(270deg, var(--hijau-terang), #ffffff, var(--hijau-tua), #ffffff); 
+    background-size: 800% 800%; 
+    animation: gerakWarna 5s ease infinite; 
+    color: var(--hijau-tua); 
+    padding: 0; 
+    text-align: center; 
+    border-bottom: 0px solid var(--hijau-terang); 
+    font-weight: bold;
+}
+
+@keyframes gerakWarna {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ============================================================
+   3. NAVBAR & MENU DROPDOWN
+   ============================================================ */
 .navbar {
     background-color: #003517;
     padding: 10px 15px;
-    border-bottom: 1px solid #1aed9c;
+    border-bottom: 1px solid var(--hijau-terang);
 }
 
 .nav-container {
@@ -288,7 +330,6 @@ box-sizing:border-box;
     background-color: #777;
 }
 
-/* Dropdown Menu Style */
 .nav-list {
     display: none;
     position: absolute;
@@ -298,12 +339,10 @@ box-sizing:border-box;
     list-style: none;
     width: 200px;
     z-index: 100;
-    border: 1px solid #1aed9c;
+    border: 1px solid var(--hijau-terang);
 }
 
-.nav-list.active {
-    display: block;
-}
+.nav-list.active { display: block; }
 
 .nav-list li a {
     color: white;
@@ -314,26 +353,13 @@ box-sizing:border-box;
 }
 
 .nav-list li a:hover {
-    background: #1aed9c;
+    background: var(--hijau-terang);
     color: #000;
 }
 
-
-/* Keyframes untuk menggerakkan background */
-@keyframes warnaBerjalan {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-/* CSS BANNER */
+/* ============================================================
+   4. BANNER UTAMA
+   ============================================================ */
 .main-banner {
     position: relative;
     width: 101%;
@@ -343,19 +369,20 @@ box-sizing:border-box;
 .main-banner img {
     width: 99%;
     display: block;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-/* CSS Live Jam & Tanggal */
-/* CSS KHUSUS HEADER RESULT */
+/* ============================================================
+   5. TABEL DATA & JADWAL MACAU
+   ============================================================ */
 .header-result-container {
     text-align: center;
     padding: 15px 10px;
     background-color: #f4f4f4;
-    border-top: 1px solid #333; /* Memberi sedikit pembatas atas */
+    border-top: 1px solid #333;
 }
 
-
-/* CSS TABEL JADWAL MACAU */
 .table-macau-container {
     margin: 20px auto;
     width: 95%;
@@ -375,344 +402,120 @@ box-sizing:border-box;
     text-align: center;
 }
 
-/* STYLE ISI TABEL */
+.table-macau td { padding: 12px 10px; }
+
 .table-macau tbody tr {
     border-bottom: 1px solid #333;
     transition: 0.3s;
 }
 
-.table-macau tbody tr:hover {
-    background: rgba(46, 204, 113, 0.1); /* Efek highlight saat baris disentuh */
-}
+.table-macau tbody tr:hover { background: rgba(46, 204, 113, 0.1); }
 
-.table-macau td {
-    padding: 12px 10px;
-}
+.col-name { background: rgba(46, 204, 113, 0.05); font-weight: 500; }
+.col-res { color: #2ecc71; font-weight: bold; }
 
-.col-name {
-    background: rgba(46, 204, 113, 0.05);
-    font-weight: 500;
-}
-
-.col-res {
-    color: #2ecc71;
-    font-weight: bold;
-}
-
-
-
-:root {
-            --primary: #747474;
-            --accent: #e74c3c;
-            --light: #003517;
-            --gold: #f1c40f;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background: var(--light); }
-        header { 
-    /* Warna gradasi hijau-putih-hijau-putih */
-    background: linear-gradient(270deg, #1aed9c, #ffffff, #054d32, #ffffff); 
-    background-size: 800% 800%; /* Membuat kanvas gradasi jadi sangat lebar agar bisa digeser */
-    
-    /* Animasi berjalan selama 5 detik, berulang terus (infinite) */
-    animation: gerakWarna 5s ease infinite; 
-    
-    color: #054d32; /* Teks dibuat gelap agar kontras dengan warna putih yang lewat */
-    padding: 0rem 0; 
-    text-align: center; 
-    border-bottom: 0px solid #1aed9c; 
-    font-weight: bold;
-}
-
-/* Logika pergerakan background */
-@keyframes gerakWarna {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-        
-        /* Gaya Artikel */
-        .main-article { background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .main-article h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; }
-
-/* CSS SEDERHANA & CEPAT */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            background: #34495e;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 10px;
-            position: sticky;
-            top: 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            margin: 5px;
-            background: #e67e22;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            background: #d35400;
-        }
-
-.menu-table{
-width:100%;
-max-width:360px;
-margin:auto;
-border:2px solid #003517;
-border-radius:12px;
-padding:12px;
-background:#f3f6fb;
-border-collapse:separate;
-}
-
-/* Judul Menu */
-
-.menu-title{
-background:#003517;
-color:white;
-font-size:20px;
-padding:12px;
-text-align:center;
-border-radius:8px;
-font-weight:700;
-}
-
-/* Tombol Menu */
-
-.btn-link{
-display:block;
-background:#e6e6e6;
-border:2px solid #003517;
-border-radius:12px;
-padding:14px;
-margin:10px 0;
-text-align:center;
-text-decoration:none;
-font-weight:600;
-color:#003517;
-font-size:16px;
-transition:all 0.3s ease;
-}
-
-/* Icon */
-
-.btn-link i{
-margin-right:8px;
-}
-
-/* Hover Effect */
-
-.btn-link:hover{
-background:#1e4fa1;
-color:white;
-box-shadow:0 0 15px rgba(30,79,161,0.6);
-transform:translateY(-2px);
-}
-
-/* Mobile */
-
-@media (max-width:768px){
-
-.menu-table{
-max-width:100%;
-}
-
-.btn-link{
-font-size:15px;
-padding:12px;
-}
-
-}
-
-.menu-icon{
-width:20px;
-height:200px;
-vertical-align:middle;
-margin-right:8px;
-}
-
-#faq-macau{
-margin-top:40px;
-padding:20px;
-background:#f5f5f5;
-border-radius:8px;
-}
-
-#faq-macau h2{
-font-size:24px;
-text-align:center;
-margin-bottom:20px;
-color:#222;
-}
-
-#faq-macau h4{
-font-size:18px;
-padding:12px;
-background:#ffffff;
-color:#222;
-border-radius:5px;
-}
-
-#faq-macau p{
-padding:12px;
-font-size:16px;
-line-height:1.6;
-background:#fff;
-color:#444;
-}
-
-.seo-content{
-margin:40px 0;
-padding:0 15px;
-line-height:1.8;
-font-size:16px;
-color:#444;
-}
-
-.seo-content h1{
-font-size:28px;
-font-weight:700;
-margin-bottom:20px;
-color:#111;
-line-height:1.4;
-text-align:center;
-}
-
-.seo-content h2{
-font-size:22px;
-margin-top:35px;
-margin-bottom:15px;
-padding-left:10px;
-border-left:4px solid #003517;
-color:#222;
-}
-
-.seo-content p{
-margin-bottom:18px;
-color:#555;
-}
-
-.seo-content a{
-color:#003517;
-font-weight:600;
-text-decoration:none;
-border-bottom:1px dotted #003517;
-}
-
-.seo-content a:hover{
-color:#0056a3;
-border-bottom:1px solid #0056a3;
-}
-
-@media (max-width:768px){
-
-.seo-content h1{
-font-size:24px;
-}
-
-.seo-content h2{
-font-size:20px;
-}
-
-.nav-floating-top {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* ============================================================
+   6. MENU LINK NAVIGASI (Tombol-tombol)
+   ============================================================ */
+.menu-table {
     width: 100%;
-    display: flex;
-    z-index: 10000;
-    background: rgba(0, 0, 0, 0.8); /* Background hitam transparan */
-    backdrop-filter: blur(5px); /* Efek kaca blur */
-    border-bottom: 2px solid #ffd700; /* Garis emas tipis di bawah */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    max-width: 360px;
+    margin: auto;
+    border: 2px solid #003517;
+    border-radius: 12px;
+    padding: 12px;
+    background: #f3f6fb;
+    border-collapse: separate;
 }
 
-.nav-item {
-    flex: 1;
-    padding: 15px 0;
+.menu-title {
+    background: #003517;
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.btn-link {
+    display: block;
+    background: #e6e6e6;
+    border: 2px solid #003517;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 10px 0;
     text-align: center;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #003517;
     font-size: 16px;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
-}
-
-.icon {
-    margin-right: 8px;
-    font-size: 18px;
-}
-
-.floating-wrapper {
-    position: fixed;
-    top: -4px; /* Jarak dari atas layar */
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Supaya posisi di tengah */
-    z-index: 10000;
-}
-
-.nav-rounded {
-    display: flex;
-    width: 100%; /* Lebar tombol 95% layar */
-    background: linear-gradient(to right, #2d5a3f, #1a3324); /* Warna hijau gelap mewah */
-    border-radius: 19px; /* Membuat bentuk kapsul/bulat */
-    border: 2px solid #ffd700; /* Bingkai emas */
-    overflow: hidden;
-    box-shadow: 7px 4px 25px #1aed9c;
-}
-
-.nav-item {
-    flex: 1;
-    padding: 12px 0;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 800; /* Font tebal/bold */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: all 0.3s ease;
 }
 
-/* Container Utama Menempel Atas dengan Radius Bawah */
+.btn-link:hover {
+    background: #1e4fa1;
+    color: white;
+    box-shadow: 0 0 15px rgba(30,79,161,0.6);
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   7. ARTIKEL SEO & FAQ
+   ============================================================ */
+.main-article { 
+    background: #ffffff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    margin-bottom: 30px; 
+}
+
+.main-article h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; }
+
+.seo-content { padding: 0 15px; line-height: 1.8; font-size: 15px; color: #444; }
+
+.seo-content h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+    text-align: center;
+}
+
+.seo-content h2 {
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #003517;
+    color: #222;
+}
+
+#faq-macau {
+    margin-top: 40px;
+    padding: 20px;
+    background: none;
+    border-radius: 8px;
+}
+
+#faq-macau h2 { text-align: center; margin-bottom: 20px; color: #222; }
+#faq-macau h4 { padding: 12px; background: none; color: #222; border-radius: 5px; }
+#faq-macau p { padding: 12px; background: none; color: #444; }
+
+/* ============================================================
+   8. FLOATING NAVBAR (Menu Bawah Bulat)
+   ============================================================ */
 .top-nav-rounded {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     z-index: 10000;
-    background: linear-gradient(to bottom, #006400, #003d00); /* Hijau Gelap */
-    
-    /* EFEK RADIUS: Melengkung di sudut bawah kiri & kanan */
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    
-    border-bottom: 3px solid #ffd700; /* Garis emas bawah */
+    background: linear-gradient(to bottom, #006400, #003d00);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top: 3px solid #ffd700;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     padding: 2px 0;
 }
@@ -731,25 +534,16 @@ font-size:20px;
     align-items: center;
     text-decoration: none;
     padding: 8px 2px;
-    transition: all 0.2s ease;
-    -webkit-tap-highlight-color: transparent;
 }
 
-/* EFEK KLIK: Sorot Putih Bulat */
 .nav-btn-item:active {
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 50px; /* Membuat area sorot saat diklik jadi bulat */
+    border-radius: 50px;
     transform: scale(0.92);
 }
 
-/* Ukuran Ikon */
-.nav-btn-item img {
-    width: 26px;
-    height: auto;
-    margin-bottom: 3px;
-}
+.nav-btn-item img { width: 26px; height: auto; margin-bottom: 3px; }
 
-/* Teks Bold */
 .nav-btn-item span {
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
@@ -759,30 +553,62 @@ font-size:20px;
     text-shadow: 1px 1px 2px #000;
 }
 
-/* Garis Pembatas Vertikal */
-.nav-sep {
-    width: 1px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.2);
+.nav-sep { width: 1px; height: 30px; background: rgba(255, 255, 255, 0.2); }
+
+/* ============================================================
+   9. RESPONSIVE (Tampilan Mobile)
+   ============================================================ */
+@media (max-width:768px) {
+    .menu-table { max-width: 100%; }
+    .btn-link { font-size: 15px; padding: 12px; }
+    .seo-content h1 { font-size: 24px; }
+    .seo-content h2 { font-size: 20px; }
 }
 
-/* Menyesuaikan jarak Body agar tidak tertutup */
-body {
-    margin: 0;
-    padding-top: 75px;
-}
-
-/* Responsif untuk HP Kecil (Tetap dipertahankan) */
 @media (max-width: 360px) {
     .nav-btn-item span { font-size: 9px; }
     .nav-btn-item img { width: 22px; }
-    .top-nav-rounded { border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
 }
 
+/* CSS UNTUK RUNNING TEXT VALID AMP */
+.running-text-wrapper {
+    background: #fdfdfd;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
 }
+
+.running-text-content {
+    display: inline-block;
+    padding-left: 100%;
+    font-size: 12px;
+    color: #333;
+    animation: jalanTerus 15s linear infinite;
+}
+
+@keyframes jalanTerus {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
 </style>
 
 <body>
+    
+<header> <div class="banner-container" style="width: 100%; max-width: 100%; overflow: hidden;">
+        <a href="https://www.dgcompany.site/">
+            <img src="https://i.postimg.cc/15b1bnWC/MACAU.png" alt="Banner Macau Terupdate" style="width: 100%; height: 80px; border-radius: 5px; border: 0px solid #2bff00;">
+        </a>
+    </div>
+</header>
+
+<div class="running-text-wrapper">
+    <div class="running-text-content">
+        Situs Resmi Pengeluaran Macau 2026 Terpercaya. Dapatkan Update Live Draw Macau Tercepat, Data Paito Macau Hari Ini, dan Bocoran Prediksi Macau Langsung dari Sumbernya.
+    </div>
+</div>
+    
 <div class="top-nav-rounded">
     <div class="nav-content-inner">
         <a href="promosi.html" class="nav-btn-item">
@@ -828,7 +654,7 @@ body {
 
 <h1>Paito Macau Terbaru, Prediksi Macau Akurat, Live Draw Macau dan Data Macau Lengkap</h1>
 <p style="text-align:center; font-size:13px; color:#d35400; font-weight:bold;">
-    <i class="fa fa-sync fa-spin"></i> Terakhir Diperbarui: <span id="current-date">8 Maret 2026</span>
+    <i class="fa fa-sync fa-spin"></i> Terakhir Diperbarui: <span id="current-date"></span>
 </p>
 <p>Paito Macau merupakan salah satu informasi yang paling banyak dicari oleh para pemain pasaran Macau. Dengan melihat tabel paito yang lengkap, pengguna dapat mengetahui riwayat hasil keluaran angka sebelumnya sehingga dapat melakukan analisa angka dengan lebih mudah. Situs ini menyediakan berbagai informasi penting mulai dari Paito Macau terbaru, Prediksi Macau harian, Live Draw Macau secara real-time, hingga Data Macau lengkap yang selalu diperbarui setiap hari.</p>
 
@@ -1022,4 +848,17 @@ Data Macau
 © 2014 - 2026 www.dgcompany.site - Paito Macau, Prediksi Macau, Live Draw Macau dan Data Macau Terlengkap. All Rights Reserved.
 </p>
 
+<script>
+        function updateDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            const formattedDate = today.toLocaleDateString('id-ID', options);
+            const element = document.getElementById('current-date');
+            if (element) {
+                element.textContent = formattedDate;
+            }
+        }
+        updateDate();
+    </script>
 </body>
+</html>
