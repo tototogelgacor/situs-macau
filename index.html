@@ -6,6 +6,7 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script async custom-element="amp-date-display" src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"></script>
   
   <!-- SEO Meta Tags -->
   <title>Paito Macau | Prediksi, Live Draw & Data Macau Terbaru</title>
@@ -653,9 +654,20 @@ header {
 <section class="seo-content">
 
 <h1>Paito Macau Terbaru, Prediksi Macau Akurat, Live Draw Macau dan Data Macau Lengkap</h1>
-<p style="text-align:center; font-size:13px; color:#d35400; font-weight:bold;">
-    <i class="fa fa-sync fa-spin"></i> Terakhir Diperbarui: <span id="current-date"></span>
-</p>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 5px; font-size: 15px; color: #d35400; font-weight: bold; margin-bottom: 10px;">
+    
+    <i class="fa fa-sync fa-spin"></i> 
+    <span>Terakhir Diperbarui:</span>
+
+    <amp-date-display datetime="now" layout="fixed-height" height="25px" locale="id-ID" style="display: inline-block; width: auto;">
+        <template type="amp-mustache">
+{{dayName}}, {{day}} {{monthName}} {{year}}
+        </template>
+    </amp-date-display>
+    
+</div>
+
 <p>Paito Macau merupakan salah satu informasi yang paling banyak dicari oleh para pemain pasaran Macau. Dengan melihat tabel paito yang lengkap, pengguna dapat mengetahui riwayat hasil keluaran angka sebelumnya sehingga dapat melakukan analisa angka dengan lebih mudah. Situs ini menyediakan berbagai informasi penting mulai dari Paito Macau terbaru, Prediksi Macau harian, Live Draw Macau secara real-time, hingga Data Macau lengkap yang selalu diperbarui setiap hari.</p>
 
 <p>Banyak pemain menggunakan tabel paito sebagai referensi utama sebelum menentukan angka. Dengan melihat pola hasil sebelumnya, pengguna dapat mencoba menemukan pola tertentu yang sering muncul pada pasaran Macau. Oleh karena itu keberadaan tabel paito yang lengkap dan mudah dibaca sangat membantu bagi siapa saja yang ingin memantau perkembangan hasil Macau dari waktu ke waktu.</p>
@@ -848,17 +860,5 @@ Data Macau
 © 2014 - 2026 www.dgcompany.site - Paito Macau, Prediksi Macau, Live Draw Macau dan Data Macau Terlengkap. All Rights Reserved.
 </p>
 
-<script>
-        function updateDate() {
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const today = new Date();
-            const formattedDate = today.toLocaleDateString('id-ID', options);
-            const element = document.getElementById('current-date');
-            if (element) {
-                element.textContent = formattedDate;
-            }
-        }
-        updateDate();
-    </script>
 </body>
 </html>
