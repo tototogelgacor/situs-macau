@@ -1,11 +1,40 @@
+# ==========================================
+# KONFIGURASI ROBOTS.TXT UNTUK DGCOMPANY.SITE
+# ==========================================
+
+# 1. IZINKAN SEMUA MESIN PENCARI UTAMA (SEO)
+# Bagian ini wajib agar web cepat terindeks di Google, Bing, dll.
 User-agent: *
 Allow: /
-
-Disallow: /cgi-bin/
 Disallow: /search
-Disallow: /*?*
-Disallow: /wp-admin/
+Disallow: /404
+Disallow: /private/
+Disallow: /config/
 
-Allow: /wp-admin/admin-ajax.php
+# 2. BLOKIR BOT AI TRAINING (MENJAGA DATA ASLI ANDA)
+# Mencegah AI mengambil data Anda tanpa memberikan trafik balik.
+User-agent: Google-Extended
+Disallow: /
 
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+# 3. OPTIMASI CRAWL BUDGET
+# Mencegah bot yang tidak berguna menghabiskan resource server.
+User-agent: AdsBot-Google
+Allow: /
+
+# 4. ALAMAT SITEMAP (WAJIB UNTUK GOOGLE SEARCH CONSOLE)
 Sitemap: https://www.dgcompany.site/sitemap.xml
